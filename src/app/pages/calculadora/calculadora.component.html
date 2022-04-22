@@ -1,0 +1,148 @@
+<div class="header">
+  <img
+    class="l5Logo"
+    src="https://www.l5.com.br/wp-content/uploads/2017/08/l5networks.png"
+  />
+  <h3>
+    Daniel Mendes de Almeida | Teste para a L5 Network - Calculadora | caso
+    queiram mais alguma funcionalidade ou mudar o que foi desenvolvido por favor
+    me digam.
+  </h3>
+  <h3>
+    Repositório GitHub:
+    <a
+      href="https://github.com/danalmeida29/calculadora"
+      style="color: pink"
+      target="blank"
+      >danalmeida29/calculadora</a
+    >
+    <hr />
+    <!-- <a>{{ ano }}</a> -->
+  </h3>
+</div>
+<div class="fundo">
+  <div class="calculadora">
+    <label>Equação</label>
+    <div data-previous-operand id="resultado">{{ input }}</div>
+    <label>Display</label>
+    <div data-current-operand id="resultado">{{ result }}</div>
+    <table>
+      <tr>
+        <td>
+          <button mat-button class="button3" (click)="limpar()">
+            <mat-icon>skip_previous</mat-icon>
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button3" (click)="clicarNumero('(')">
+            (
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button3" (click)="clicarNumero(')')">
+            )
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button2" (click)="clicarOperador('/')">
+            /
+          </button>
+        </td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>
+          <button mat-button class="button" (click)="clicarNumero('7')">
+            7
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button" (click)="clicarNumero('8')">
+            8
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button" (click)="clicarNumero('9')">
+            9
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button2" (click)="clicarOperador('*')">
+            <mat-icon>close</mat-icon>
+          </button>
+        </td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>
+          <button mat-button class="button" (click)="clicarNumero('4')">
+            4
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button" (click)="clicarNumero('5')">
+            5
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button" (click)="clicarNumero('6')">
+            6
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button2" (click)="clicarOperador('-')">
+            <mat-icon>remove</mat-icon>
+          </button>
+        </td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>
+          <button mat-button class="button" (click)="clicarNumero('1')">
+            1
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button" (click)="clicarNumero('2')">
+            2
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button" (click)="clicarNumero('3')">
+            3
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button2" (click)="clicarOperador('+')">
+            <mat-icon>add</mat-icon>
+          </button>
+        </td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>
+          <button mat-button class="button" (click)="clicarNumero('0')">
+            0
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button" (click)="clicarNumero('.')">
+            .
+          </button>
+        </td>
+        <td>
+          <button mat-button class="button3" (click)="limparTudo()">C</button>
+        </td>
+        <td>
+          <button mat-button class="button2" (click)="obtemResposta()">
+            <mat-icon>drag_handle</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
